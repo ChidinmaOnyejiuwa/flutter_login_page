@@ -115,6 +115,8 @@ class SignInScreen extends StatelessWidget {
                               Checkbox(
                                 value: rememberPassword,
                                 onChanged: (bool? value) {
+                                  //i tried adding a set but am getting error
+                                  //please comment on how i can solve this
                                  // setState(() {
                                     rememberPassword = value!;
                                  // });

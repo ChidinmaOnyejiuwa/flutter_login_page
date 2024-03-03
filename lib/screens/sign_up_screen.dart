@@ -53,7 +53,7 @@ class SignUpScreen extends StatelessWidget {
                           },
                           decoration: InputDecoration(
                             labelText: "Name",
-                            hintText: "Enter Name",
+                            hintText: "Enter Full Name",
                             hintStyle: TextStyle(
                               color: Colors.black87,
                             ),
@@ -71,35 +71,6 @@ class SignUpScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        TextFormField(
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return "Please enter Email";
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                            labelText: "Email",
-                            hintText: "Enter Email",
-                            hintStyle: TextStyle(
-                              color: Colors.black87,
-                            ),
-                            border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.black26,
-                              ),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.black54,
-                              ),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 20,),
                         TextFormField(
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -166,6 +137,7 @@ class SignUpScreen extends StatelessWidget {
                                 Checkbox(
                                   value: agreePersonalData,
                                   onChanged: (bool? value) {
+                                    //also here to my state is not working
                                    // setState(() {
                                       agreePersonalData = value!;
                                    // });
@@ -200,7 +172,7 @@ class SignUpScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(height: 30),
+                        SizedBox(height: 20),
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
@@ -222,7 +194,7 @@ class SignUpScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 30),
+                        SizedBox(height: 20),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
